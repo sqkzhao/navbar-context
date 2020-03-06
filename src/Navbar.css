@@ -1,0 +1,19 @@
+.navbar {
+    height: 80px;
+    background-color: #6a0dad;
+}
+
+.greeting {
+    color: white;
+    text-align: right;
+    line-height: 80px;
+    margin: 0;
+    padding-right: 10px;
+}
+
+.inputBox {
+    width: 250px;
+    margin: 10px auto;
+    font-size: 20px;
+}
+

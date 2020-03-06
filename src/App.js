@@ -1,26 +1,17 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, {useState} from 'react';
 import './App.css';
+import Wrapper from './components/Wrapper'
+import Navbar from './components/Navbar'
+import FormWrapper from './components/FormWrapper'
 
 function App() {
+  const [nameState, setNameState] = useState("")
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <Wrapper.Provider value={{nameState, setNameState}}>
+        <Navbar/>
+        <FormWrapper/>
+    </Wrapper.Provider>
+  )
 }
 
 export default App;
